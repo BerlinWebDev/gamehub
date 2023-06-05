@@ -10,7 +10,7 @@ import React from "react";
 import useGenre from "../hooks/useGenre";
 import getCroppedImageUrl from "../services/image-url";
 
-const GenreList = ({ onSelectGenre }) => {
+const GenreList = ({ selectedGenre, onSelectGenre }) => {
   const { data, loading, error } = useGenre("/genres");
 
   if (error) return null;
@@ -28,6 +28,7 @@ const GenreList = ({ onSelectGenre }) => {
               src={getCroppedImageUrl(genre.image_background)}
             />
             <Button
+              fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
               variant="link"
               fontSize="lg"
               onClick={() => onSelectGenre(genre)}
