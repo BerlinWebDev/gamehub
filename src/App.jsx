@@ -8,7 +8,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import "./App.css";
-import NavBar from "./components/navbar";
+import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { useState } from "react";
