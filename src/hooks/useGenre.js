@@ -1,5 +1,5 @@
-import useData from "./useData";
+import genres from "../data/genres";
 
-const useGenre = () => useData("/genres");
+const useGenre = () => ({ data: genres, isLoading: false, error: null });
 
 export default useGenre;
