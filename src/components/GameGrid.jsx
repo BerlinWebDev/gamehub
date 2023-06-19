@@ -14,7 +14,6 @@ function GameGrid({ gameQuery }) {
       columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
       padding="10px"
       spacing={6}
-      centerContent
     >
       {loading &&
         skeletons.map((skeleton) => (
